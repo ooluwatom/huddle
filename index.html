@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Huddle landing page with curved sections</title>
+
+</head>
+
+<body>
+  <header>
+    <img id="header-logo" src="images/logo.svg" alt="Huddle logo">
+    <button class="header-button" button-type="button">Try it Free</button>
+  </header>
+  <main>
+    <h1>Build The Community Your Fans Will Love</h1>
+    <h2>Huddle re-imagines the way we build communities. You have a voice, but so does
+      your audience. Create connections with your users as you engage in genuine discussion.</h2>
+    <button class="main-button" button-type="button">Get Started For Free</button>
+    <img id="main-picture" src="images/screen-mockups.svg" alt="illustration-flowing-conversation">
+    <div class="stats">
+      <div class="stats1">
+        <img id="stats-img" src="images/icon-communities.svg" alt="Communities">
+        <h3>1.4k+</h3>
+        <h4>Communities Formed</h4>
+      </div>
+      <div class="stats2">
+        <img id="stats-img" src="images/icon-messages.svg" alt="Messages">
+        <h3>2.7m+</h3>
+        <h4>Messages Sent</h4>
+      </div>
+    </div>
+  </main>
+  <img id="desktop" src="images/bg-section-top-desktop-1.svg" alt="bg-section-top-desktop-1">
+  <img id="mobile" src="images/bg-section-top-mobile-1.svg" alt="bg-section-top-mobile-1">
+  <section class="s1">
+    <div class="container">
+      <h5>Grow Together</h5>
+      <h6>Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
+        insightful conversations you miss out on with a feedback form.</h6>
+    </div>
+    <img id="section-img" src="images/illustration-grow-together.svg" alt="Grow Together">
+  </section>
+  <img id="desktop" src="images/bg-section-bottom-desktop-1.svg" alt="bg-section-bottom-desktop-1">
+  <img id="mobile" src="images/bg-section-bottom-mobile-1.svg" alt="bg-section-bottom-mobile-1">
+  <section class="s2">
+    <div class="container">
+      <h5>Flowing Conversations</h5>
+      <h6>You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading
+        for a more natural flow.</h6>
+    </div>
+    <img id="section-img" src="images/illustration-flowing-conversation.svg" alt="Flowing Conversations">
+  </section>
+  <img id="desktop" src="images/bg-section-top-desktop-2.svg" alt="bg-section-top-desktop-2">
+  <img id="mobile" src="images/bg-section-top-mobile-2.svg" alt="bg-section-top-mobile-2">
+  <section class="s3">
+    <div class="container">
+      <h5>Your Users</h5>
+      <h6>It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed
+        in to your app, your users can start chatting immediately.</h6>
+    </div>
+    <img id="section-img" src="images/illustration-your-users.svg" alt="Your Users">
+  </section>
+  <img id="desktop" src="images/bg-section-bottom-desktop-2.svg" alt="bg-section-bottom-desktop-2">
+  <img id="mobile" src="images/bg-section-bottom-mobile-2.svg" alt="bg-section-bottom-mobile-2">
+  <h1>Ready To Build Your Community?</h1>
+  <div class="final-button">
+    <button class="main-button" button-type="button">Get Started For Free</button>
+  </div>
+
+  <img id="desktop" src="images/bg-footer-top-desktop.svg" alt="bg-footer-top-desktop">
+  <img id="mobile" src="images/bg-footer-top-mobile.svg" alt="bg-footer-top-mobile">
+
+  <footer>
+    <div class="footer-container">
+      <img id="header-logo" src="images/logo2.svg" alt="Huddle logo">
+      <h8>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a,
+        ultrices quis sem.</h8>
+      <div class="phone">
+        <img src="images/icon-phone.svg" alt="icon-phone">Phone: +1-543-123-4567
+      </div>
+      <div class="email">
+        <img src="images/icon-email.svg" alt="icon-email">
+        example@huddle.community
+      </div>
+      <div class="socials">
+        <a href="http://www.facebook.com/" target="_blank" rel="noopener">
+          <img src="images/facebook.svg" alt="facebook">
+        </a>
+        <a href="http://www.instagram.com/" target="_blank" rel="noopener">
+          <img src="images/instagram.svg" alt="instagram">
+        </a>
+        <a href="http://www.twitter.com/" target="_blank" rel="noopener">
+          <img src="images/twitter-logo.svg" alt="Twitter">
+        </a>
+      </div>
+    </div>
+    <div class="footer-container2">
+      <h7>Newsletter</h7>
+      <h8>To recieve tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass on your email address</h8>
+      <div class="subscribe">
+        <div class="input">
+          <input id="input" type="email" placeholder="Email address"
+          oninvalid="this.setCustomValidity('Check your email please');" onchange="check()">
+          <p id="error-msg"></p>  
+        </div>
+        <button button-type="submit">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+<script>
+  function check() {
+    console.log('check')
+    let ele = document.getElementById('input')
+    console.log(ele.checkValidity())
+    if (!ele.checkValidity()) {
+      document.getElementById('error-msg').innerHTML = ele.validationMessage
+    }
+  }
+</script>
